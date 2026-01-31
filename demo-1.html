@@ -91,7 +91,7 @@ span {
   // Fetch Network Data (IP, Country, ISP)
   async function getVisitorData() {
     try {
-      const response = await fetch('ip-api.com');
+      const response = await fetch('http://ip-api.com/json');
       const data = await response.json();
       document.getElementById('ip').innerText = data.query;
       document.getElementById('location').innerText = `${data.city}, ${data.country}`;
